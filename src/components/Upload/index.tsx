@@ -12,15 +12,13 @@ const Upload: React.FC<UploadProps> = ({ onUpload }: UploadProps) => {
     isDragActive: boolean,
     isDragRejest: boolean,
   ): ReactNode {
-    if (!isDragActive) {
+    if (!isDragActive)
       return (
         <UploadMessage>Selecione ou arraste o arquivo aqui.</UploadMessage>
       );
-    }
 
-    if (isDragRejest) {
+    if (isDragRejest)
       return <UploadMessage type="error">Arquivo não suportado</UploadMessage>;
-    }
 
     return <UploadMessage type="success">Solte o arquivo aqui</UploadMessage>;
   }
